@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(6, 100px);
+            gap: 10px;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        div {
+            border-radius: 15px;
+        }
+
+        .container div {
+
+
+            border: 1px solid black;
+            background-color: #ccc;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+        }
+
+        #output {
+            background-color: #FFF;
+            grid-column: 1 / -1;
+            display: flex;
+            justify-content: end;
+            font-size: 3rem;
+            align-items: end;
+            padding: 0 10px;
+
+        }
+
+        #equal {
+            background-color: green;
+            color: whitesmoke;
+            height: 200px;
+            grid-column: 4;
+            grid-row: 5/-1;
+        }
+
+        #zero {
+            grid-column: 1/3;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div id="output"></div>
+        <div>AC</div>
+        <div>C</div>
+        <div>/</div>
+        <div>X</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>-</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>+</div>
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div id="equal">=</div>
+        <div id="zero">0</div>
+        <div>.</div>
+
+
+
+    </div>
+
+</body>
+
+<script>
+    'use strict'
+    const container = document.querySelector('.container')
+
+    let ac = document.querySelectorAll('div')[2]
+    let c = document.querySelectorAll('div')[3]
+    let devide = document.querySelectorAll('div')[4]
+    let mult = document.querySelectorAll('div')[5]
+    let seven = document.querySelectorAll('div')[6]
+    let eight = document.querySelectorAll('div')[7]
+    let nine = document.querySelectorAll('div')[8]
+    let minus = document.querySelectorAll('div')[9]
+    let four = document.querySelectorAll('div')[10]
+    let five = document.querySelectorAll('div')[11]
+    let six = document.querySelectorAll('div')[12]
+    let plus = document.querySelectorAll('div')[13]
+    let one = document.querySelectorAll('div')[14]
+    let two = document.querySelectorAll('div')[15]
+    let three = document.querySelectorAll('div')[16]
+    let equal = document.querySelectorAll('div')[17]
+    let zero = document.querySelectorAll('div')[18]
+    let dot = document.querySelectorAll('div')[19]
+
+    let output = document.querySelector('#output')
+
+    zero.addEventListener('click', () => {
+
+
+        output.innerHTML += 0
+    })
+
+    one.addEventListener('click', () => {
+
+
+        output.innerHTML += 1
+    })
+
+    two.addEventListener('click', () => {
+
+        output.innerHTML += 2
+    })
+    three.addEventListener('click', () => {
+
+        output.innerHTML += 3
+    })
+
+    four.addEventListener('click', () => {
+
+        output.innerHTML += 4
+    })
+
+    five.addEventListener('click', () => {
+
+        output.innerHTML += 5
+    })
+
+    six.addEventListener('click', () => {
+
+        output.innerHTML += 6
+    })
+
+    seven.addEventListener('click', () => {
+
+        output.innerHTML += 7
+    })
+
+    eight.addEventListener('click', () => {
+
+        output.innerHTML += 8
+    })
+
+    nine.addEventListener('click', () => {
+
+        output.innerHTML += 9
+    })
+
+    dot.addEventListener('click', () => {
+
+        output.innerHTML += '.'
+    })
+
+
+    ac.addEventListener('click', () => {
+        output.innerHTML = ''
+    })
+
+    c.addEventListener('click', () => {
+        output.innerHTML = ''
+
+    })
+
+
+    mult.addEventListener('click', () => {
+        output.innerHTML += '*'
+    })
+    devide.addEventListener('click', () => {
+        output.innerHTML += '/'
+    })
+    plus.addEventListener('click', () => {
+        output.innerHTML += '+'
+    })
+    minus.addEventListener('click', () => {
+
+
+        output.innerHTML += '-'
+    })
+
+
+
+    equal.addEventListener('click', () => {
+
+        output.innerHTML = eval(output.innerHTML)
+
+        console.log(output.innerHTML);
+
+
+
+    })
+</script>
+
+</html>
