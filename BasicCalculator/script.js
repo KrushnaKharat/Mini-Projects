@@ -1,5 +1,7 @@
 const container = document.querySelector('.container')
 
+const body = document.querySelector('body')
+
 let ac = document.querySelectorAll('div')[2]
 let c = document.querySelectorAll('div')[3]
 let devide = document.querySelectorAll('div')[4]
@@ -111,6 +113,76 @@ equal.addEventListener('click', () => {
 
     console.log(output.innerHTML);
 
+
+
+})
+
+
+body.addEventListener('keydown', (e) => {
+    // console.log(e.key);
+
+    switch (e.key) {
+        case '1':
+            output.innerHTML += 1
+            break;
+        case '2':
+            output.innerHTML += 2
+            break;
+        case '3':
+            output.innerHTML += 3
+            break;
+        case '4':
+            output.innerHTML += 4
+            break;
+        case '5':
+            output.innerHTML += 5
+            break;
+        case '6':
+            output.innerHTML += 6
+            break;
+        case '7':
+            output.innerHTML += 7
+            break;
+        case '8':
+            output.innerHTML += 8
+            break;
+        case '9':
+            output.innerHTML += 9
+            break;
+        case '0':
+            output.innerHTML += 0
+            break;
+        case '*':
+            output.innerHTML += '*'
+            break;
+        case '/':
+            output.innerHTML += '/'
+            break;
+        case '-':
+            output.innerHTML += '-'
+            break;
+        case '+':
+            output.innerHTML += '+'
+            break;
+
+        case 'Enter':
+            output.innerHTML = eval(output.innerHTML)
+            break;
+        case 'Escape':
+            output.innerHTML = ''
+            break;
+        case 'Backspace':
+            let newStr = '';
+            for (let i = 0; i < output.innerHTML.length - 1; i++) {
+                newStr += output.innerHTML[i]
+            }
+
+            output.innerHTML = newStr
+            break;
+
+        default:
+            break;
+    }
 
 
 })
