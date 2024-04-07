@@ -1,0 +1,65 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: 25%;
+    border: 2px solid black;
+    margin: auto;
+    box-shadow: 0px 0px 9px rgb(186, 97, 255);
+
+}
+
+.display {
+    margin: auto;
+    font-size: 7rem;
+    color: white;
+    /* transition: all 2s; */
+}
+
+button {
+    font-size: 30px;
+    width: 100px;
+    border: none;
+    /* box-shadow: 0px 0px 9px rgb(255, 255, 255); */
+    text-align: center;
+}
+
+.back>button {
+    background-color: red;
+}
+
+.next>button {
+
+    background-color: rgb(43, 255, 0);
+}
+
+.next>button:active {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.back>button:active {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+.reset>button:active {
+    box-shadow: 0px 0px 10px rgb(255, 255, 255);
+}
+
+
+.buttons {
+    display: flex;
+
+    /* font-size: 4rem; */
+
+    justify-content: space-around;
+}
