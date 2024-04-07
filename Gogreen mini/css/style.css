@@ -3,7 +3,28 @@ Author: W3layouts
 Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
+
+
+
+
 --*/
+
+
+
+.flex-location{
+	display: flex;
+	flex-direction: column;
+}
+
+.location{
+	font-size: 30px;
+	color: rgb(223, 223, 223);
+	padding: 10px;
+	margin: 20px;
+}
+
+
+
 html, body{
     font-size: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -502,10 +523,23 @@ button.close {
 /*-- //welcome --*/
 /*-- welcome-bottom --*/
 .welcome-bottom{
-	background:#aeb09f;
+	background: url('../images/welcomebck.jpg') ;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 22rem;
+    overflow: hidden;
+
 }
 .wthree_welcome_bottom_right{
-	padding:0;
+	padding: 0;
+    margin: 0px;
+    height: auto;
+    width: 47%;
+    box-shadow: 0px 0px 10px #72ff72;
 }
 .wthree_welcome_bottom_left{
 	padding:4.5em 5em 0;
